@@ -1,0 +1,113 @@
+.productManagement {
+  min-height: 100vh;
+  background-color: #0d101a;
+  padding: 70px 0;
+  text-align: center;
+}
+
+.productManagement h1 {
+  color: #fff;
+}
+
+.productManagement .container form {
+  width: 100%;
+}
+
+.productManagement .container form input,
+.productManagement .search-holder input {
+  display: block;
+  width: 100%;
+  background-color: #fff1;
+  margin-bottom: 20px;
+  height: 45px;
+  outline: none;
+  border-radius: 7px;
+  border: none;
+  padding: 12px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  box-shadow: 0 0 10px #111;
+}
+
+.productManagement .container form .holder-price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.productManagement .container form .holder-price input {
+  width: calc(100% / 5);
+}
+
+.productManagement .container form input::placeholder {
+  font-size: 16px;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+.productManagement .container form .holder-price .subtotal {
+  width: calc(100% / 5);
+  margin-bottom: 20px;
+  background-color: #006988;
+  height: 45px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 7px;
+}
+
+.productManagement .container form .holder-price .subtotal span {
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.productManagement .container form .create-btn,
+.productManagement .search-holder .search-btns button {
+  width: 100%;
+  padding: 6px;
+  border-radius: 20px;
+  background: #3f51b5;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  height: 40px;
+  border: 1px solid transparent;
+  outline: none;
+  transition: 0.3s;
+}
+
+.productManagement .container form .create-btn:hover {
+  background-color: #121a4a;
+  border: 1px solid #ddd;
+}
+
+/***********************  End Form  ***************************** */
+/***********************  Start Search  ***************************** */
+.productManagement .search-holder {
+  margin-top: 25px;
+}
+
+/* .productManagement .search-holder input {} The Same Input Top Grouping*/
+/* .productManagement .search-holder .search-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px
+}
+.productManagement .search-holder .search-btns button{
+  width: calc(100% / 2);
+  font-size: 16px;
+} */
+/***********************  End Search  ***************************** */
+/***********************  Start Table  ***************************** */
+.productManagement table {
+  margin-top: 40px;
+}
+
+/***********************  End Table  ***************************** */

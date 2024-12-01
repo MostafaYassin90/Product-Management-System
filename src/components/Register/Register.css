@@ -1,0 +1,123 @@
+.register {
+  min-height: 100vh;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register .holder-form {
+  width: 600px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #0d101a;
+  box-shadow: 0 0 10px #000;
+}
+
+.register .holder-form .register-title {
+  font-size: 27px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.register .holder-form .goToLogin {
+  margin: 20px 0;
+  text-align: right;
+}
+
+.register .holder-form .goToLogin p {
+  color: #ddd;
+  font-size: 15px;
+}
+
+.register .holder-form .goToLogin a {
+  margin-left: 5px;
+  font-weight: bold;
+  color: #009688;
+  font-size: 16px;
+}
+
+.register .holder-form form {
+  width: 100%;
+  height: 100%;
+}
+
+.register .holder-form form div.holder-field {
+  margin-bottom: 30px;
+}
+
+.register .holder-form form div label {
+  display: block;
+  font-weight: 500;
+  transform: translate(3px, -3px);
+  font-size: 17px;
+  color: #fff;
+}
+
+.register .holder-form form div input {
+  display: block;
+  height: 43px;
+  width: 100%;
+  padding: 12px;
+  background-color: #fff1;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.register .holder-form form .register-btn {
+  display: block;
+  margin-bottom: 20px;
+  width: 120px;
+  border-radius: 20px;
+  background-color: #fff1;
+  margin: 0 auto;
+  color: #fff;
+  padding: 6px;
+  border: 1px solid #eee;
+  transition: 0.5s;
+}
+
+.register .holder-form form .register-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Holder Input */
+.register .holder-form form .holder-input {
+  position: relative;
+  height: 43px;
+}
+
+.register .holder-form form .holder-input svg {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  padding: 6px;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.register .holder-form form .field-error{
+  color: #ff0000e8;
+  transform: translate(10px, 3px);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.submit-error {
+  text-align: center;
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 7px;
+    background: #000;
+    color: #f00;
+}
