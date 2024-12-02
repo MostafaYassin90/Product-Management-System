@@ -1,16 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/utils/prismaClient";
-import { optional, z } from "zod";
-import { validData } from "@hookform/resolvers/ajv/src/__tests__/__fixtures__/data.js";
+import { z } from "zod";
 import { TCreateProduct } from "@/utils/serverTypes";
-import { request } from "http";
 
 
-type TProps = {
-  params: {
-    id: string
-  }
-}
+
 /* ************************************************ */
 /* 
 ** @Method Get
@@ -18,9 +12,9 @@ type TProps = {
 ** @Desc Get A Single Product
 ** @Access Public
 */
-export async function GET(reuqest: NextRequest, props: TProps) {
+export async function GET(reuqest: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const { id } = props.params;
+    const id = ((await params).id);
     const findProduct = await prisma.product.findUnique({ where: { id: parseInt(id) } });
     if (!findProduct) {
       return NextResponse.json({ message: "Product Not Found." }, { status: 400 })
@@ -38,9 +32,9 @@ export async function GET(reuqest: NextRequest, props: TProps) {
 ** @Access Public
 */
 
-export async function PUT(request: NextRequest, props: TProps) {
+export async function PUT(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const { id } = props.params;
+    const id = (await params).id;
     const findProduct = await prisma.product.findUnique({ where: { id: parseInt(id) } });
     if (!findProduct) {
       return NextResponse.json({ message: "Product Not Found." }, { status: 400 });
@@ -88,9 +82,9 @@ export async function PUT(request: NextRequest, props: TProps) {
 ** @Access Public
 */
 
-export async function DELETE(request: NextRequest, props: TProps) {
+export async function DELETE(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const { id } = props.params;
+    const id = (await params).id;
     const findProduct = await prisma.product.findUnique({ where: { id: parseInt(id) } });
 
     if (!findProduct) {
