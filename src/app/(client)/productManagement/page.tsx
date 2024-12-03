@@ -12,7 +12,7 @@ import "./ProductManagement.css";
 
 function ProductManagement() {
   const searchParams = useSearchParams();
-  let productId = searchParams.get("productId");
+  let productId = searchParams.get("productId") as unknown as string;
 
   // Router
   const router = useRouter();
@@ -42,7 +42,6 @@ function ProductManagement() {
       setDiscount(data.discount);
       setCount(data.count);
       setCategory(data.category);
-      // router.replace(`/productManagement?productId=${productId}`)
     } catch (error) {
       if (isAxiosError(error)) {
         return toast.error("An UnExpected Error.")

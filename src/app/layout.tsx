@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Roboto_Flex } from "next/font/google";
+// import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.css"
 import "react-toastify/dist/ReactToastify.css";
 
 
-const roboto = Roboto_Flex(
-  {
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700", "800"],
-    style: ["normal"]
-  }
-)
+// const roboto = Roboto_Flex(
+//   {
+//     subsets: ["latin"],
+//     weight: ["400", "500", "600", "700", "800"],
+//     style: ["normal"]
+//   }
+// )
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body>
         {children}
       </body>
     </html>
